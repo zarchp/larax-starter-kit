@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
@@ -11,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class ProfileController extends Controller
+final class ProfileController extends Controller
 {
     /**
      * Show the user's profile settings page.
@@ -27,15 +29,15 @@ class ProfileController extends Controller
     /**
      * Update the user's profile settings.
      */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(ProfileUpdateRequest $profileUpdateRequest): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $profileUpdateRequest->user()->fill($profileUpdateRequest->validated());
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        if ($profileUpdateRequest->user()->isDirty('email')) {
+            $profileUpdateRequest->user()->email_verified_at = null;
         }
 
-        $request->user()->save();
+        $profileUpdateRequest->user()->save();
 
         return to_route('profile.edit');
     }
