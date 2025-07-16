@@ -11,5 +11,10 @@ export function Icon({
   className,
   ...props
 }: IconProps) {
-  return <IconComponent className={cn('h-4 w-4', className)} {...props} />;
+  return (
+    <IconComponent
+      className={cn('h-4 w-4', className)}
+      {...props}
+    />
+  );
 }

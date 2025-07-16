@@ -58,7 +58,10 @@ export default function ResetPassword({ token, email }: ResetPasswordProps) {
               readOnly
               onChange={(e) => setData('email', e.target.value)}
             />
-            <InputError message={errors.email} className="mt-2" />
+            <InputError
+              message={errors.email}
+              className="mt-2"
+            />
           </div>
 
           <div className="grid gap-2">
@@ -95,7 +98,11 @@ export default function ResetPassword({ token, email }: ResetPasswordProps) {
             />
           </div>
 
-          <Button type="submit" className="mt-4 w-full" disabled={processing}>
+          <Button
+            type="submit"
+            className="mt-4 w-full"
+            disabled={processing}
+          >
             {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
             Reset password
           </Button>

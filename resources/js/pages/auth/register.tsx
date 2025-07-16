@@ -39,7 +39,10 @@ export default function Register() {
       description="Enter your details below to create your account"
     >
       <Head title="Register" />
-      <form className="flex flex-col gap-6" onSubmit={submit}>
+      <form
+        className="flex flex-col gap-6"
+        onSubmit={submit}
+      >
         <div className="grid gap-6">
           <div className="grid gap-2">
             <Label htmlFor="name">Name</Label>
@@ -55,7 +58,10 @@ export default function Register() {
               disabled={processing}
               placeholder="Full name"
             />
-            <InputError message={errors.name} className="mt-2" />
+            <InputError
+              message={errors.name}
+              className="mt-2"
+            />
           </div>
 
           <div className="grid gap-2">
@@ -119,7 +125,10 @@ export default function Register() {
 
         <div className="text-center text-sm text-muted-foreground">
           Already have an account?{' '}
-          <TextLink href={route('login')} tabIndex={6}>
+          <TextLink
+            href={route('login')}
+            tabIndex={6}
+          >
             Log in
           </TextLink>
         </div>

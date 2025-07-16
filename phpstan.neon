@@ -17,6 +17,8 @@ parameters:
     excludePaths:
         - '**/ide-helper.php'
         - '**/ide_helper_models.php'
+        - 'tests'
+        - 'vendor'
     configDirectories:
         - config
         - src/config

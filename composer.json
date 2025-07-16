@@ -1,6 +1,6 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
-  "name": "zarchp/larax-starter-kit",
+  "name": "zarchp/react-starter-kit",
   "type": "project",
   "description": "An opinionated laravel react starter kit.",
   "keywords": [
@@ -15,6 +15,7 @@
     "laravel/framework": "^12.0",
     "laravel/tinker": "^2.10.1",
     "laravel/wayfinder": "^0.1.6",
+    "nunomaduro/essentials": "^0.1.0",
     "tightenco/ziggy": "^2.4"
   },
   "require-dev": {
@@ -29,8 +30,10 @@
     "laravel/sail": "^1.41",
     "mockery/mockery": "^1.6",
     "nunomaduro/collision": "^8.6",
+    "peckphp/peck": "^0.1.3",
     "pestphp/pest": "^3.8",
     "pestphp/pest-plugin-laravel": "^3.2",
+    "pestphp/pest-plugin-type-coverage": "^3.6",
     "rector/rector": "^2.1",
     "tightenco/duster": "^3.2"
   },
@@ -72,9 +75,36 @@
       "Composer\\Config::disableProcessTimeout",
       "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"php artisan inertia:start-ssr\" --names=server,queue,logs,ssr --kill-others"
     ],
+    "duster": "duster fix",
+    "fix": [
+      "@test:types",
+      "duster",
+      "@refactor",
+      "pnpm lint:fix"
+    ],
+    "lint": [
+        "@test:duster",
+        "pnpm run test:lint"
+    ],
+    "pint": "pint",
+    "refactor": "rector",
+    "test:arch": "pest --arch",
+    "test:coverage": "pest --coverage --min=80",
+    "test:duster": "duster lint",
+    "test:lint": "pint --test",
+    "test:refactor": "rector --dry-run",
+    "test:types": "phpstan",
+    "test:typos": "peck",
+    "test:type-coverage": "pest --type-coverage --min=100",
+    "test:unit": "pest --parallel --coverage --min=80",
     "test": [
       "@php artisan config:clear --ansi",
-      "@php artisan test"
+      "@test:type-coverage",
+      "@test:unit",
+      "@test:types",
+      "@test:typos",
+      "@test:duster",
+      "@test:refactor"
     ]
   },
   "extra": {

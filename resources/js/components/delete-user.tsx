@@ -73,9 +73,15 @@ export default function DeleteUser() {
               also be permanently deleted. Please enter your password to confirm
               you would like to permanently delete your account.
             </DialogDescription>
-            <form className="space-y-6" onSubmit={deleteUser}>
+            <form
+              className="space-y-6"
+              onSubmit={deleteUser}
+            >
               <div className="grid gap-2">
-                <Label htmlFor="password" className="sr-only">
+                <Label
+                  htmlFor="password"
+                  className="sr-only"
+                >
                   Password
                 </Label>
 
@@ -95,12 +101,19 @@ export default function DeleteUser() {
 
               <DialogFooter className="gap-2">
                 <DialogClose asChild>
-                  <Button variant="secondary" onClick={closeModal}>
+                  <Button
+                    variant="secondary"
+                    onClick={closeModal}
+                  >
                     Cancel
                   </Button>
                 </DialogClose>
 
-                <Button variant="destructive" disabled={processing} asChild>
+                <Button
+                  variant="destructive"
+                  disabled={processing}
+                  asChild
+                >
                   <button type="submit">Delete account</button>
                 </Button>
               </DialogFooter>

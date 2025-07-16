@@ -58,7 +58,10 @@ export default function Profile({
             description="Update your name and email address"
           />
 
-          <form onSubmit={submit} className="space-y-6">
+          <form
+            onSubmit={submit}
+            className="space-y-6"
+          >
             <div className="grid gap-2">
               <Label htmlFor="name">Name</Label>
 
@@ -72,7 +75,10 @@ export default function Profile({
                 placeholder="Full name"
               />
 
-              <InputError className="mt-2" message={errors.name} />
+              <InputError
+                className="mt-2"
+                message={errors.name}
+              />
             </div>
 
             <div className="grid gap-2">
@@ -89,7 +95,10 @@ export default function Profile({
                 placeholder="Email address"
               />
 
-              <InputError className="mt-2" message={errors.email} />
+              <InputError
+                className="mt-2"
+                message={errors.email}
+              />
             </div>
 
             {mustVerifyEmail && auth.user.email_verified_at === null && (

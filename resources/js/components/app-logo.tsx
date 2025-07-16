@@ -1,6 +1,6 @@
 import AppLogoIcon from './app-logo-icon';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Larax Starter Kit';
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel React Starter Kit';
 
 export default function AppLogo() {
   return (
