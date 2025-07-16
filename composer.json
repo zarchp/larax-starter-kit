@@ -77,28 +77,29 @@
     ],
     "duster": "duster fix",
     "fix": [
-      "@test:types",
       "duster",
       "@refactor",
-      "pnpm lint:fix"
+      "pnpm lint"
     ],
     "lint": [
-        "@test:duster",
-        "pnpm run test:lint"
+      "@test:duster",
+      "pnpm test:lint"
     ],
     "pint": "pint",
     "refactor": "rector",
     "test:arch": "pest --arch",
     "test:coverage": "pest --coverage --min=80",
     "test:duster": "duster lint",
-    "test:lint": "pint --test",
+    "test:lint": [
+      "@test:duster",
+      "pnpm test:lint"
+    ],
     "test:refactor": "rector --dry-run",
     "test:types": "phpstan",
     "test:typos": "peck",
     "test:type-coverage": "pest --type-coverage --min=100",
     "test:unit": "pest --parallel --coverage --min=80",
     "test": [
-      "@php artisan config:clear --ansi",
       "@test:type-coverage",
       "@test:unit",
       "@test:types",
