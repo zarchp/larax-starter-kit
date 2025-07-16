@@ -77,7 +77,7 @@
     ],
     "duster": "duster fix",
     "fix": [
-      "duster",
+      "@duster",
       "@refactor",
       "pnpm lint"
     ],
