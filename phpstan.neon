@@ -6,18 +6,21 @@ parameters:
 
     paths:
         - app
-        # - bootstrap
-        # - tests
-        # - database
-        # - routes
-        # - config
-
-    # Level 10 is the highest level
+        - bootstrap
+        - database/factories
+        - routes
+        - config
     level: 10
-
-    # ignoreErrors:
-    #     - '#PHPDoc tag @var#'
-
+    checkOctaneCompatibility: true
+    checkModelProperties: true
+    treatPhpDocTypesAsCertain: false
     excludePaths:
         - '**/ide-helper.php'
         - '**/ide_helper_models.php'
+    configDirectories:
+        - config
+        - src/config
+        - tests
+
+    # ignoreErrors:
+    #     - '#PHPDoc tag @var#'

@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
+use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
+use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
-use Rector\DeadCode\Rector\PropertyProperty\RemoveNullPropertyInitializationRector;
+use Rector\DeadCode\Rector\Node\RemoveNonExistingVarAnnotationRector;
 use Rector\Php74\Rector\Closure\ClosureToArrowFunctionRector;
 use Rector\Privatization\Rector\ClassMethod\PrivatizeFinalClassMethodRector;
 use RectorLaravel\Set\LaravelSetList;
@@ -11,7 +13,7 @@ use RectorLaravel\Set\LaravelSetList;
 return RectorConfig::configure()
     ->withPaths([
         __DIR__ . '/app',
-        __DIR__ . '/bootstrap',
+        __DIR__ . '/bootstrap/app.php',
         __DIR__ . '/config',
         __DIR__ . '/database',
         __DIR__ . '/lang',
@@ -34,10 +36,6 @@ return RectorConfig::configure()
         carbon: true,
         rectorPreset: true,
     )
-    // ->withTypeCoverageLevel(0)
-    // ->withDeadCodeLevel(0)
-    // ->withCodeQualityLevel(0)
-    // ->withCodingStyleLevel(0)
     ->withParallel(120, 16, 10)
     ->withSets([
         LaravelSetList::LARAVEL_120,
@@ -50,7 +48,8 @@ return RectorConfig::configure()
     ])
     ->withSkip([
         ClosureToArrowFunctionRector::class,
-        PrivatizeFinalClassMethodRector::class,
-        RemoveNullPropertyInitializationRector::class,
+        EncapsedStringsToSprintfRector::class,
+        RemoveNonExistingVarAnnotationRector::class,
+        SymplifyQuoteEscapeRector::class,
         __DIR__ . '/bootstrap/cache',
     ]);
