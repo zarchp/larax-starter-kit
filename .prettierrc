@@ -8,6 +8,7 @@
   "tailwindFunctions": ["clsx", "cn"],
   "tailwindStylesheet": "resources/css/app.css",
   "tabWidth": 2,
+  "endOfLine": "lf",
   "overrides": [
     {
       "files": "**/*.yml",

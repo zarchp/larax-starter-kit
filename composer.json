@@ -107,7 +107,7 @@
       "@test:types",
       "@test:duster",
       "@test:refactor",
-      "pnpm test:lint"
+      "pnpm lint"
     ]
   },
   "extra": {
