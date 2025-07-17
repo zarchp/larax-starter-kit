@@ -5,7 +5,7 @@
 This repository is a custom starter kit for building Laravel and React applications. It includes a set of pre-configured packages and tools to help you get started quickly. Please note that this kit is opinionated, meaning that it reflects the preferences and best practices of the maintainers.
 
 > [!IMPORTANT]
-> This repository uses PNPM (Performant NPM) instead of NPM. PNPM is a faster and more efficient package manager that is compatible with NPM. To use this repository, you must have PNPM installed on your system.
+> This repository uses PNPM (Performant NPM) instead of NPM. If you don't have PNPM installed, you can install it by running `npm install -g pnpm` or by following the installation instructions on the PNPM website.
 
 ## Installation
 
@@ -13,8 +13,6 @@ To install this repository using the Laravel installer, run the following comman
 ```bash
 laravel new my-app --using=zarchp/react-starter-kit
 ```
-
-Note: Make sure you have PNPM installed on your system before running the above commands. If you don't have PNPM installed, you can install it by running `npm install -g pnpm` or by following the installation instructions on the PNPM website.
 
 ## Additional Packages
 
