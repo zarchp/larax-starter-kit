@@ -2,15 +2,9 @@
 
 ## Introduction
 
-Our React starter kit provides a robust, modern starting point for building Laravel applications with a React frontend using [Inertia](https://inertiajs.com).
-
-Inertia allows you to build modern, single-page React applications using classic server-side routing and controllers. This lets you enjoy the frontend power of React combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
-
-This React starter kit utilizes React 19, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
-
 This repository is a custom starter kit for building Laravel and React applications. It includes a set of pre-configured packages and tools to help you get started quickly. Please note that this kit is opinionated, meaning that it reflects the preferences and best practices of the maintainers.
 
-> [!IMPORTANT: PNPM Required]
+> [!IMPORTANT]
 > This repository uses PNPM (Performant NPM) instead of NPM. PNPM is a faster and more efficient package manager that is compatible with NPM. To use this repository, you must have PNPM installed on your system.
 
 ## Installation
