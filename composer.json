@@ -105,9 +105,9 @@
       "@test:type-coverage",
       "@test:unit",
       "@test:types",
-      "@test:typos",
       "@test:duster",
-      "@test:refactor"
+      "@test:refactor",
+      "pnpm test:lint"
     ]
   },
   "extra": {
