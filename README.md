@@ -1,4 +1,4 @@
-# Laravel + React Starter Kit
+# # Opinionated Laravel React Starter Kit
 
 ## Introduction
 
@@ -8,17 +8,63 @@ Inertia allows you to build modern, single-page React applications using classic
 
 This React starter kit utilizes React 19, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
 
-## Official Documentation
+This repository is a custom starter kit for building Laravel and React applications. It includes a set of pre-configured packages and tools to help you get started quickly. Please note that this kit is opinionated, meaning that it reflects the preferences and best practices of the maintainers.
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+> [!IMPORTANT: PNPM Required]
+> This repository uses PNPM (Performant NPM) instead of NPM. PNPM is a faster and more efficient package manager that is compatible with NPM. To use this repository, you must have PNPM installed on your system.
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+To install this repository using the Laravel installer, run the following command:
+```bash
+laravel new my-app --using=zarchp/react-starter-kit
+```
 
-## Code of Conduct
+Note: Make sure you have PNPM installed on your system before running the above commands. If you don't have PNPM installed, you can install it by running `npm install -g pnpm` or by following the installation instructions on the PNPM website.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Additional Packages
+
+This repository includes the following additional packages:
+
+### Composer
+
+* `barryvdh/laravel-ide-helper` for generating IDE helper files to improve auto-completion and code navigation
+* `barryvdh/laravel-debugbar` for providing a comprehensive debugging toolbar to aid in development and troubleshooting
+* `laravel-shift/blueprint` for code generation tool for Laravel developers
+* `rector/rector` for automatically refactoring PHP code to improve readability, maintainability, and performance
+* `pint/pint` for optimizing PHP code styling and formatting to adhere to the PSR-12 standard
+* `larastan/larastan` for performing static analysis and type checking on PHP code to catch errors and improve code quality
+* `laravel/wayfinder` for generating optimized route definitions and improving application performance
+* `laravel-lang/common` for providing a set of common language translations and localization tools
+* `peckphp/peck` for identify pure wording or spelling (grammar) mistakes in your codebase
+* `tightenco/duster` for optimizing PHP code styling and formatting
+* `nunomaduro/essentials` for providing a set of essential tools and utilities for Laravel development
+* `mantraideas/laravel-env-doctor` for analyzing and optimizing environment variables to improve application performance and security
+* `spatie/laravel-csp` for Content Security Policy (CSP)
+
+### NPM
+
+* `@laravel/vite-plugin-wayfinder` for integrating Laravel's Wayfinder package with Vite to enable optimized route definitions
+
+## Custom Commands
+
+This repository includes the following custom commands:
+
+### Linting
+
+* `composer lint` to run PHP linter
+* `pnpm lint` to run JavaScript linter
+
+### Testing
+
+* `composer test` to run PHP unit tests
+* `pnpm test` to run JavaScript unit tests
+
+### Fixing
+
+* `composer fix` to fix PHP code style issues
+* `pnpm fix` to fix JavaScript code style issues
+
 
 ## License
 

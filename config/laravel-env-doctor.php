@@ -31,16 +31,17 @@ return [
         'BCRYPT_ROUNDS',
 
         'LOG_CHANNEL',
+        'LOG_DAILY_DAYS',
         'LOG_STACK',
         //        'LOG_DEPRECATIONS_CHANNEL',
         'LOG_LEVEL',
 
         'DB_CONNECTION',
-        //        'DB_HOST',
-        //        'DB_PORT',
-        //        'DB_DATABASE',
-        //        'DB_USERNAME',
-        //        'DB_PASSWORD',
+        'DB_HOST',
+        'DB_PORT',
+        'DB_DATABASE',
+        'DB_USERNAME',
+        'DB_PASSWORD',
 
         'SESSION_DRIVER',
         'SESSION_LIFETIME',
@@ -77,6 +78,9 @@ return [
         'AWS_USE_PATH_STYLE_ENDPOINT',
 
         'VITE_APP_NAME',
+
+        'DEBUGBAR_ENABLED',
+        'CSP_ENABLED',
 
     ],
 
