@@ -17,6 +17,7 @@
     "laravel/wayfinder": "^0.1.6",
     "mantraideas/laravel-env-doctor": "^1.0",
     "nunomaduro/essentials": "^0.1.0",
+    "spatie/laravel-csp": "^3.13",
     "tightenco/ziggy": "^2.4"
   },
   "require-dev": {
@@ -56,8 +57,7 @@
       "@php artisan package:discover --ansi"
     ],
     "post-update-cmd": [
-      "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-      "@php artisan lang:update"
+      "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
