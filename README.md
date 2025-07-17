@@ -11,7 +11,7 @@ This repository is a custom starter kit for building Laravel and React applicati
 
 To install this repository using the Laravel installer, run the following command:
 ```bash
-laravel new my-app --using=zarchp/react-starter-kit
+laravel new --using=zarchp/react-starter-kit myapp
 ```
 
 ## Additional Packages
