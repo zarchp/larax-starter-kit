@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d7011b867f0824edd655da59b46411e",
+    "content-hash": "0e8dcc9d56bfecd335a2e997992fe2db",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -3858,6 +3858,52 @@
                 }
             ],
             "time": "2024-12-08T08:18:47+00:00"
+        },
+        {
+            "name": "mantraideas/laravel-env-doctor",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MantraIdeas/LaravelEnvDoctor.git",
+                "reference": "7ed6d2d5f3cf3f2c026bf00ab3207ba89286eff3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MantraIdeas/LaravelEnvDoctor/zipball/7ed6d2d5f3cf3f2c026bf00ab3207ba89286eff3",
+                "reference": "7ed6d2d5f3cf3f2c026bf00ab3207ba89286eff3",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mantraideas\\LaravelEnvDoctor\\LaravelEnvDoctorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mantraideas\\LaravelEnvDoctor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dipesh Khanal",
+                    "email": "dipeshkhanal79@gmail.com",
+                    "homepage": "https://www.khanaldipesh.com.np",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "LaravelEnvDoctor is a developer-friendly CLI tool for Laravel that checks your .env variables, validates the current environment, and ensures directory permissions are correctly set — helping you catch misconfigurations before they become problems.",
+            "support": {
+                "issues": "https://github.com/MantraIdeas/LaravelEnvDoctor/issues",
+                "source": "https://github.com/MantraIdeas/LaravelEnvDoctor/tree/1.0.3"
+            },
+            "time": "2025-05-29T05:46:39+00:00"
         },
         {
             "name": "monolog/monolog",

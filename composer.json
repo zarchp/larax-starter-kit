@@ -15,6 +15,7 @@
     "laravel/framework": "^12.0",
     "laravel/tinker": "^2.10.1",
     "laravel/wayfinder": "^0.1.6",
+    "mantraideas/laravel-env-doctor": "^1.0",
     "nunomaduro/essentials": "^0.1.0",
     "tightenco/ziggy": "^2.4"
   },
@@ -90,6 +91,7 @@
     "test:arch": "pest --arch",
     "test:coverage": "pest --coverage --min=80",
     "test:duster": "duster lint",
+    "test:env": "@php artisan env:doctor",
     "test:lint": [
       "@test:duster",
       "pnpm test:lint"
