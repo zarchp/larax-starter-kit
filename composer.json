@@ -91,7 +91,7 @@
     "pint": "pint",
     "refactor": "rector",
     "test:arch": "pest --arch",
-    "test:coverage": "pest --coverage --min=80",
+    "test:coverage": "pest --parallel --coverage --exactly=100",
     "test:duster": "duster lint",
     "test:env": "@php artisan env:doctor",
     "test:lint": [
@@ -101,8 +101,8 @@
     "test:refactor": "rector --dry-run",
     "test:types": "phpstan",
     "test:typos": "peck",
-    "test:type-coverage": "pest --type-coverage --min=100",
-    "test:unit": "pest --parallel --coverage --min=80",
+    "test:type-coverage": "pest --parallel --type-coverage --min=100",
+    "test:unit": "pest --parallel --coverage --exactly=100",
     "test": [
       "@test:type-coverage",
       "@test:unit",

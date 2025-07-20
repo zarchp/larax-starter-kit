@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
+use Rector\CodingStyle\Rector\PostInc\PostIncDecToPreIncDecRector;
 use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\Node\RemoveNonExistingVarAnnotationRector;
@@ -50,5 +51,6 @@ return RectorConfig::configure()
         EncapsedStringsToSprintfRector::class,
         RemoveNonExistingVarAnnotationRector::class,
         SymplifyQuoteEscapeRector::class,
+        PostIncDecToPreIncDecRector::class,
         __DIR__ . '/bootstrap/cache',
     ]);

@@ -47,3 +47,20 @@ function something(): void
 {
     // ..
 }
+
+/**
+ * Extends the Expectation API to determine if a timestamp is close to another timestamp.
+ *
+ * This is useful for comparing timestamps in tests where exact matching may not be reliable
+ * due to slight differences in the milliseconds when the timestamps were created.
+ *
+ * @param int $expected The expected timestamp to compare against
+ * @param int $tolerance The maximum allowed difference in seconds between timestamps (default: 10)
+ * @return $this
+ *
+ * Example usage:
+ * expect($someTimestamp)->toBeCloseToTimestamp(now()->timestamp);
+ */
+expect()->extend('toBeCloseToTimestamp', function (int $expected, int $tolerance = 10): \Pest\Expectation {
+    return expect(abs($this->value - $expected) <= $tolerance)->toBeTrue();
+});
