@@ -1,4 +1,4 @@
 {
-    "preset": "tighten",
-    "disabled": ["RemoveLeadingSlashNamespaces"]
+  "preset": "tighten",
+  "disabled": []
 }

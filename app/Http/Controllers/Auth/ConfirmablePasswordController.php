@@ -34,7 +34,7 @@ final class ConfirmablePasswordController extends Controller
             'password' => __('auth.password'),
         ]));
 
-        $request->session()->put('auth.password_confirmed_at', \Carbon\Carbon::now()->getTimestamp());
+        $request->session()->put('auth.password_confirmed_at', now()->getTimestamp());
 
         return redirect()->intended(route('dashboard', absolute: false));
     }

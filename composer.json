@@ -17,7 +17,8 @@
     "laravel/wayfinder": "^0.1.6",
     "mantraideas/laravel-env-doctor": "^1.0",
     "nunomaduro/essentials": "^0.1.0",
-    "spatie/laravel-csp": "^3.13",
+    "spatie/laravel-data": "^4.17",
+    "spatie/laravel-typescript-transformer": "^2.5",
     "tightenco/ziggy": "^2.4"
   },
   "require-dev": {
@@ -108,7 +109,8 @@
       "@test:types",
       "@test:duster",
       "@test:refactor"
-    ]
+    ],
+    "ts": "@php artisan typescript:transform"
   },
   "extra": {
     "laravel": {
